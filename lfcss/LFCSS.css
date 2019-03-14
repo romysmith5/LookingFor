@@ -99,34 +99,25 @@ p {
 
 .social-footer {
   padding: 1rem;
-  background: #8a8a8a;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  background: $dark-gray;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.social-footer .social-footer-icons li:last-of-type {
-  margin-right: 0;
-}
+.social-footer-icons {
+    li:last-of-type {
+      margin-right: 0;
+    }
 
-.social-footer .social-footer-icons .fa {
-  font-size: 1.3rem;
-  color: #fefefe;
-}
+    .fa {
+      font-size: 1.3rem;
+      color: $white;
 
-.social-footer .social-footer-icons .fa:hover {
-  color: #4a4a4a;
-  transition: color 0.3s ease-in;
-}
-
-
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
+      &:hover {
+        color: darken($dark-gray, 25%);
+        transition: color 0.3s ease-in;
+      }
+    }
+  }
 }
