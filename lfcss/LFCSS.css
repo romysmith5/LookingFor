@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+.header {
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-family: sans-serif;
+  padding: 20px;
+  font-weight: bold;
+  text-align: left;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: sans-serif;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+img {
+	width: 100%;
+	border-radius: 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	/* the repeat makes the grid resize with the window width */
+  grid-gap: 20px;
+  padding: 50px;
+}
+
+/* styling for the text overlay */
+
+.container {
+  position: relative;
+  width: 100%;
+	overflow: hidden;
+	border-radius: 39px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+	z-index: 1;
+}
+
+.image img {
+	filter: blur(0px);
+	transition: filter 0.3s ease;
+	transform: scale(1);
+}
+.container:hover .overlay {
+	opacity: 1;
+}
+
+.container:hover .image img {
+  filter: blur(4px);
+}
+
+
+.text {
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+/* ADDING SOCIAL MEDIA BUTTONS */
+
+p {
+  text-align: center;
+}
+
+.social-footer {
+  padding: 1rem;
+  background: #8a8a8a;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+  margin-right: 0;
+}
+
+.social-footer .social-footer-icons .fa {
+  font-size: 1.3rem;
+  color: #fefefe;
+}
+
+.social-footer .social-footer-icons .fa:hover {
+  color: #4a4a4a;
+  transition: color 0.3s ease-in;
+}
+
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
